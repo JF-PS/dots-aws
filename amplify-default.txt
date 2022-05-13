@@ -1,0 +1,16 @@
+version: 1
+applications:
+  - frontend:
+      phases:
+        build:
+          commands: 
+            - cd ../..
+            - npm install
+            - npx nx run next-app:build:production
+      artifacts:
+        baseDirectory: dist/apps/next-app/.next
+        files:
+          - '**/*'
+      cache:
+        paths: []
+    appRoot: apps/next-app

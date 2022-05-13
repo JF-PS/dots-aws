@@ -5,6 +5,7 @@ applications:
         build:
           commands:
             # This step will build app with Nx framework
+            - cd ../../
             - npm install
             - npx nx run next-app:build:production
             # This step will build/update SSR resources(S3, Cloudfront, Lambda@Edge)
@@ -17,3 +18,4 @@ applications:
       cache:
         paths:
           - node_modules/**/*
+    appRoot: apps/next-app

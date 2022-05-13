@@ -6,34 +6,22 @@ applications:
           commands:
             # This step will build app with Nx framework
             - echo "🦄🚀=🦄🚀=🦄🚀="
-            - echo "=================="
-            - echo "=================="
             - cd ../../
             - pwd
             - echo "🦄🚀=🦄🚀=🦄🚀="
-            - echo "=================="
-            - echo "=================="
             - npm install
             - pwd
             - echo "🦄🚀=🦄🚀=🦄🚀="
-            - echo "=================="
-            - echo "=================="
             - npx nx run next-app:build:production
             - pwd
             - echo "🦄🚀=🦄🚀=🦄🚀="
-            - echo "=================="
-            - echo "=================="
             # This step will build/update SSR resources(S3, Cloudfront, Lambda@Edge)
             - cd apps/next-app
             - pwd
             - echo "🦄🚀=🦄🚀=🦄🚀="
-            - echo "=================="
-            - echo "=================="
             - npm install
             - pwd
             - echo "🦄🚀=🦄🚀=🦄🚀="
-            - echo "=================="
-            - echo "=================="
       artifacts:
         baseDirectory: ../../dist/apps/next-app/.next
         files:

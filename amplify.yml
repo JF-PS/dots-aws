@@ -9,8 +9,8 @@ applications:
             - npm install
             - npx nx run next-app:build:production
             # This step will build/update SSR resources(S3, Cloudfront, Lambda@Edge)
-            - cd apps/next-app
-            - npm install
+            # - cd apps/next-app
+            # - npm install
       artifacts:
         baseDirectory: ../../dist/apps/next-app/.next
         files:
